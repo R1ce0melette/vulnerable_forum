@@ -25,7 +25,7 @@ public class QuestionAnswerController {
 	
 	@GetMapping("/postsqli")
 	public String postSQLi(@RequestParam("username") String username, 
-			@RequestParam("password") String password,Model model, HttpServletRequest request) {
+		@RequestParam("password") String password,Model model, HttpServletRequest request) {
 		UserDAO userdao = new UserDAOImpl();
 		if(userdao.areCredentialsCorrect(username, password)) {
 			model.addAttribute("username", userdao.retrieveUserByID(1).getUsername());

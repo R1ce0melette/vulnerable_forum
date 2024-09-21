@@ -9,6 +9,7 @@
 <body>
 
 <h2>Access Denied - You are not authorised to access this resource </h2>
+<p>${error}</p>>
 
 <a href= "${pageContext.request.contextPath}/"> Back to Home Page </a>
 

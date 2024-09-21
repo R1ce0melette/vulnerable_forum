@@ -19,6 +19,15 @@ public class User {
 	private String username;
 	@Column(name = "password")
 	private String password;
+	@Column(name = "secret")
+	private String secret;
+	
+	public String getSecret() {
+		return secret;
+	}
+	public void setSecret(String secret) {
+		this.secret = secret;
+	}
 	public int getUser_id() {
 		return user_id;
 	}
@@ -39,8 +48,8 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [user_id=" + user_id + ", username=" + username + ", password=" + password + "]";
+		return "User [user_id=" + user_id + ", username=" + username + ", password=" + password + ", secret=" + secret
+				+ "]";
 	}
-	
 	
 }

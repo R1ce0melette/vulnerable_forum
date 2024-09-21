@@ -2,6 +2,7 @@ package edu.deakin.sit218.examgeneration.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -36,6 +37,7 @@ public class ExamGenSpringSecurityConfig extends WebSecurityConfigurerAdapter{
 	//authorisation part
 		http.authorizeRequests()
 				.antMatchers("/").permitAll()
+				.antMatchers(HttpMethod.POST, "/fileUpload").permitAll()
 				.anyRequest().authenticated()
 			.and()
 	//authentication part
@@ -48,8 +50,7 @@ public class ExamGenSpringSecurityConfig extends WebSecurityConfigurerAdapter{
 			 .logout().permitAll()
 			 .and()
 			 .exceptionHandling().accessDeniedPage("/access-denied");
-	    http.sessionManagement().maximumSessions(2);
-     
+	    http.sessionManagement().maximumSessions(2);     
 	}
 	
 	

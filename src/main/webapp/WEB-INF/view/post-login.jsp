@@ -24,7 +24,7 @@
 </p>
 <!-- Add a link to point to LFI -->
 <p>
-	<a href ="${pageContext.request.contextPath}/lfi"> LFI </a>
+	<a href ="${pageContext.request.contextPath}/DA"> DA </a>
 </p>
 <!-- Add a link to point to SSRF -->
 <p>

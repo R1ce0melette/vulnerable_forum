@@ -1,5 +1,7 @@
 package edu.deakin.sit218.examgeneration.entity;
 
+import java.util.List;
+
 public interface UserDAO {
 	public void updateUser(User user);
 
@@ -9,7 +11,7 @@ public interface UserDAO {
 
 	public boolean existsUser(String username, String password);
 	
-	public User retrieveUser(String username);
+	public List<User> retrieveUser(String username);
 
 	public User retrieveUserByID(int userId);
 }
