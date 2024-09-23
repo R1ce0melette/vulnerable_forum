@@ -37,7 +37,6 @@ public class ExamGenSpringSecurityConfig extends WebSecurityConfigurerAdapter{
 	//authorisation part
 		http.authorizeRequests()
 				.antMatchers("/").permitAll()
-				.antMatchers(HttpMethod.POST, "/fileUpload").permitAll()
 				.anyRequest().authenticated()
 			.and()
 	//authentication part
