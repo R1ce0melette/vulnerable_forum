@@ -6,5 +6,5 @@
 - SSRF<br>
 - Unrestricted file upload<br>
 
-<b>It also contains many other security issues (hardcoded credentials, database credentials in file, exposed error message)</b>
+<b>It also contains many other security issues (hardcoded credentials, database credentials in file, exposed error message)</b><br>
 Use the code as a reference of how not to code securely.
